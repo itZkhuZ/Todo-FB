@@ -1,38 +1,109 @@
+body {
+  background: linear-gradient(to left, hsl(237, 100%, 75%) 0%, #000ed6 100%);
+}
+
 .App {
-  text-align: center;
+  padding: 20px;
+  padding-left: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todoCard {
+  width: 500px;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todoList {
+  height: 200px;
+  overflow-y: scroll;
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.todoList::-webkit-scrollbar {
+  width: 5px;
+}
+
+.todoList::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.todoList::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.todoList::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.todoList div {
+  list-style: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+}
+
+.todoList div:hover {
+  background-color: #ddd;
+}
+
+.todoList div input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.todoList div p {
+  cursor: pointer;
+  display: inline;
+}
+
+.todoInput {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+}
+
+.addBtn {
+  width: 15%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #4caf50;
+  cursor: pointer;
+  outline: none;
+  border: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.addBtn:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deleteBtn {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.deleteBtn > .MuiSvgIcon-root {
+  width: 20px;
 }
